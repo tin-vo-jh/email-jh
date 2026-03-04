@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="x-apple-disable-message-reformatting">
+  <meta name="format-detection" content="telephone=no, date=no, address=no, email=no">
+  <title>Email Template</title>
+
+  <style type="text/css">
+    /* ----- RESET ----- */
+    body, table, td, p, h1, h2, a, span {
+      font-family: 'Noto Sans', Arial, Helvetica, sans-serif;
+      -webkit-text-size-adjust: 100%;
+      -ms-text-size-adjust: 100%;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      background-color: #e9ecef;
+    }
+    img { 
+      border: 0; 
+      outline: none; 
+      text-decoration: none; 
+      -ms-interpolation-mode: bicubic; 
+      display: block; 
+    }
+    table { 
+      border-collapse: collapse; 
+      mso-table-lspace: 0pt; 
+      mso-table-rspace: 0pt; 
+    }
+    a { color: inherit; }
+
+    /* ----- LAYOUT ----- */
+    .bg-e9ecef     { background-color: #e9ecef; }
+    .wrapper-td    { padding: 40px 0; }
+    .container     { width: 600px; max-width: 600px; background-color: #ffffff; margin: 0 auto; }
+    .logo-td       { padding: 32px 32px 24px 32px; }
+    
+    .hero-outer    { padding: 0 32px 24px 32px; }
+    .hero-inner    { padding: 16px 20px 20px 20px; }
+    .pb-14         { padding-bottom: 14px; }
+    .pb-16         { padding-bottom: 16px; }
+    .pb-4          { padding-bottom: 4px; }
+    
+    .hero-img-table { border-radius: 20px; background-color: #FFF0F0; margin: 0 auto; }
+    .hero-img-td   { padding: 0; background-color: #FFF0F0; }
+    
+    .section-outer { padding: 0 32px 24px 32px; }
+    .section-inner { padding: 12px; }
+    .col-img       { width: 45%; padding-right: 16px; vertical-align: middle; }
+    .col-img.right { padding-right: 0; padding-left: 16px; }
+    /* Thêm text-align: left để chống bị ảnh hưởng bởi căn giữa từ thẻ cha */
+    .col-txt       { width: 55%; padding-left: 16px; vertical-align: middle; text-align: left; }
+    .col-txt.left  { padding-left: 0; padding-right: 16px; }
+
+    .img-table-pink   { border-radius: 8px; background-color: #FFA1B8; }
+    .img-td-pink      { padding: 8px; background-color: #FFA1B8; border-radius: 8px; }
+    .img-table-cyan   { border-radius: 8px; background-color: #C5F8FF; }
+    .img-td-cyan      { padding: 8px; background-color: #C5F8FF; border-radius: 8px; }
+    .img-table-yellow { border-radius: 8px; background-color: #FFE27B; }
+    .img-td-yellow    { padding: 8px; background-color: #FFE27B; border-radius: 8px; }
+
+    /* Đảm bảo promo text căn trái */
+    .promo-td      { padding: 0 32px 24px 32px; text-align: left; }
+    .divider-td    { padding: 0 32px; }
+    
+    .footer-td     { padding: 24px 40px 40px 40px; }
+    .pb-6          { padding-bottom: 6px; }
+    .pb-20         { padding-bottom: 20px; }
+    .pb-2          { padding-bottom: 2px; }
+    .pb-12         { padding-bottom: 12px; }
+    .pb-24         { padding-bottom: 24px; }
+    .social-td     { padding: 0 6px; }
+
+    /* ----- TYPOGRAPHY ----- */
+    .text-center   { text-align: center; }
+    .m-auto        { margin: 0 auto; }
+    h1.logo        { font-weight: 700; font-size: 36px; line-height: 100%; color: #000000; }
+    h2.hero-h2     { font-weight: 700; font-size: 36px; line-height: 100%; color: #000000; }
+    p.hero-p       { font-size: 19px; line-height: 24px; color: #000000; text-align: center; }
+    h2.section-h2  { font-weight: 700; font-size: 27px; line-height: 34px; color: #000000; margin: 0 0 10px 0; }
+    p.section-p    { font-size: 19px; line-height: 24px; color: #000000; margin: 0 0 14px 0; }
+    p.promo-p      { font-size: 19px; line-height: 24px; color: #000000; margin: 0; }
+    .mt-24         { margin-top: 24px; }
+    p.footer-corp  { font-weight: 700; font-size: 15px; line-height: 22px; color: #000000; }
+    p.footer-sub   { font-size: 13px; line-height: 20px; color: #000000; }
+    a.footer-link  { font-size: 13px; color: #000000; text-decoration: underline; }
+    h2.footer-logo { font-weight: 700; font-size: 36px; line-height: 100%; color: #000000; }
+
+    /* ----- IMAGES ----- */
+    img.hero-img   { display: block; border: 0; width: 504px; max-width: 100%; height: auto; border-radius: 20px; }
+    img.section-img{ display: block; border: 0; width: 100%; max-width: 220px; height: auto; border-radius: 6px; }
+
+    /* ----- BUTTON ----- */
+    .btn-td { border: 1px solid #000000; border-radius: 4px; background-color: #ffffff; padding: 8px 18px; }
+    .btn-a  { font-size: 14px; color: #000000; text-decoration: none; white-space: nowrap; display: inline-block; }
+    .social-a { text-decoration: none; }
+
+    /* ----- DIVIDER ----- */
+    .divider-line { font-size: 0; line-height: 0; border-bottom: 1px solid #000000; }
+
+    /* ----- SOCIAL ICON CELLS ----- */
+    .icon-tw { width: 32px; height: 32px; background-color: #1DA1F2; border-radius: 6px; font-size: 11px; font-weight: 700; color: #ffffff; text-align: center; line-height: 32px; }
+    .icon-ig { width: 32px; height: 32px; background-color: #C13584; border-radius: 6px; font-size: 11px; font-weight: 700; color: #ffffff; text-align: center; line-height: 32px; }
+    .icon-yt { width: 32px; height: 32px; background-color: #FF0000; border-radius: 6px; font-size: 11px; font-weight: 700; color: #ffffff; text-align: center; line-height: 32px; }
+    .icon-wb { width: 32px; height: 32px; background-color: #333333; border-radius: 6px; font-size: 11px; font-weight: 700; color: #ffffff; text-align: center; line-height: 32px; }
+    .icon-in { width: 32px; height: 32px; background-color: #0A66C2; border-radius: 6px; font-size: 11px; font-weight: 700; color: #ffffff; text-align: center; line-height: 32px; }
+
+    /* ----- MOBILE (<=620px) ----- */
+    @media only screen and (max-width: 620px) {
+      table.email-container  { width: 100% !important; max-width: 100% !important; }
+      td.hero-outer          { padding: 0 8px 16px 8px !important; }
+      td.section-outer       { padding: 0 8px 16px 8px !important; }
+      td.section-inner       { padding: 6px !important; }
+      td.col-img             { width: 38% !important; padding-right: 8px !important; padding-left: 0 !important; }
+      td.col-img.right       { padding-right: 0 !important; padding-left: 8px !important; }
+      td.col-txt             { width: 62% !important; padding-left: 8px !important; padding-right: 0 !important; }
+      td.col-txt.left        { padding-left: 0 !important; padding-right: 8px !important; }
+      td.col-img img         { width: 100% !important; max-width: 100% !important; height: auto !important; }
+      img.hero-img           { width: 100% !important; max-width: 100% !important; height: auto !important; }
+      h2.hero-h2             { font-size: 24px !important; line-height: 30px !important; }
+      p.hero-p               { font-size: 14px !important; line-height: 20px !important; }
+      h2.section-h2          { font-size: 16px !important; line-height: 22px !important; margin-bottom: 6px !important; }
+      p.section-p            { font-size: 13px !important; line-height: 18px !important; margin-bottom: 8px !important; }
+      td.btn-td              { padding: 6px 12px !important; }
+      a.btn-a                { font-size: 12px !important; }
+    }
+  </style>
+
+  </head>
+<body>
+
+  <table class="bg-e9ecef" role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" bgcolor="#e9ecef">
+    <tr>
+      <td class="wrapper-td text-center" align="center">
+
+        <table class="email-container container" align="center" role="presentation" width="600" cellspacing="0" cellpadding="0" border="0">
+
+          <tr>
+            <td class="logo-td text-center" align="center">
+              <h1 class="logo">LOGO</h1>
+            </td>
+          </tr>
+
+          <tr>
+            <td class="hero-outer">
+              <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0">
+                <tr>
+                  <td class="hero-inner text-center" align="center">
+                    <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0">
+
+                      <tr>
+                        <td class="pb-14 text-center" align="center">
+                          <h2 class="hero-h2">Email Template</h2>
+                        </td>
+                      </tr>
+
+                      <tr>
+                        <td class="pb-14 text-center" align="center">
+                          <table class="hero-img-table m-auto" align="center" role="presentation" width="504" cellspacing="0" cellpadding="0" border="0" bgcolor="#FFF0F0">
+                            <tr bgcolor="#FFF0F0">
+                              <td class="hero-img-td text-center" align="center">
+                                <img class="hero-img" src="https://picsum.photos/seed/hero/504/300" alt="Hero Banner" width="504" height="300">
+                              </td>
+                            </tr>
+                          </table>
+                        </td>
+                      </tr>
+
+                      <tr>
+                        <td class="pb-16 text-center" align="center">
+                          <p class="hero-p">Boost your emails with Blush! Create dope emails easy and fast! Install the Blush plugin to customize all the illustrations!</p>
+                        </td>
+                      </tr>
+
+                      <tr>
+                        <td class="pb-4 text-center" align="center">
+                          <table class="m-auto" role="presentation" cellspacing="0" cellpadding="0" border="0" align="center">
+                            <tr>
+                              <td class="btn-td" align="center">
+                                <a class="btn-a" href="#" target="_blank">Try it now!</a>
+                              </td>
+                            </tr>
+                          </table>
+                        </td>
+                      </tr>
+
+                    </table>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+
+          <tr>
+            <td class="section-outer">
+              <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0">
+                <tr>
+                  <td class="section-inner">
+                    <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0">
+                      <tr>
+                        <td class="col-img" width="45%" valign="middle">
+                          <table class="img-table-pink" role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" bgcolor="#FFA1B8">
+                            <tr bgcolor="#FFA1B8">
+                              <td class="img-td-pink text-center" align="center">
+                                <img class="section-img" src="https://picsum.photos/seed/s1/220/220" alt="Customize email illustration" width="220" height="220">
+                              </td>
+                            </tr>
+                          </table>
+                        </td>
+                        <td class="col-txt" width="55%" valign="middle">
+                          <h2 class="section-h2">Customize this email template!</h2>
+                          <p class="section-p">Boost your emails with Blush! Create dope emails easy and fast!</p>
+                          <table role="presentation" cellspacing="0" cellpadding="0" border="0">
+                            <tr>
+                              <td class="btn-td">
+                                <a class="btn-a" href="#" target="_blank">Try it now!</a>
+                              </td>
+                            </tr>
+                          </table>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+
+          <tr>
+            <td class="section-outer">
+              <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0">
+                <tr>
+                  <td class="section-inner">
+                    <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0">
+                      <tr>
+                        <td class="col-txt left" width="55%" valign="middle">
+                          <h2 class="section-h2">Customize this email template!</h2>
+                          <p class="section-p">Boost your emails with Blush! Create dope emails easy and fast!</p>
+                          <table role="presentation" cellspacing="0" cellpadding="0" border="0">
+                            <tr>
+                              <td class="btn-td">
+                                <a class="btn-a" href="#" target="_blank">Try it now!</a>
+                              </td>
+                            </tr>
+                          </table>
+                        </td>
+                        <td class="col-img right" width="45%" valign="middle">
+                          <table class="img-table-cyan" role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" bgcolor="#C5F8FF">
+                            <tr bgcolor="#C5F8FF">
+                              <td class="img-td-cyan text-center" align="center">
+                                <img class="section-img" src="https://picsum.photos/seed/s2/220/220" alt="Customize email illustration" width="220" height="220">
+                              </td>
+                            </tr>
+                          </table>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+
+          <tr>
+            <td class="section-outer">
+              <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0">
+                <tr>
+                  <td class="section-inner">
+                    <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0">
+                      <tr>
+                        <td class="col-img" width="45%" valign="middle">
+                          <table class="img-table-yellow" role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" bgcolor="#FFE27B">
+                            <tr bgcolor="#FFE27B">
+                              <td class="img-td-yellow text-center" align="center">
+                                <img class="section-img" src="https://picsum.photos/seed/s3/220/220" alt="Customize email illustration" width="220" height="220">
+                              </td>
+                            </tr>
+                          </table>
+                        </td>
+                        <td class="col-txt" width="55%" valign="middle">
+                          <h2 class="section-h2">Customize this email template!</h2>
+                          <p class="section-p">Boost your emails with Blush! Create dope emails easy and fast!</p>
+                          <table role="presentation" cellspacing="0" cellpadding="0" border="0">
+                            <tr>
+                              <td class="btn-td">
+                                <a class="btn-a" href="#" target="_blank">Try it now!</a>
+                              </td>
+                            </tr>
+                          </table>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+
+          <tr>
+            <td class="promo-td">
+              <p class="promo-p">Boost your emails with Blush! Create dope emails easy and fast! Install the Blush plugin to customize all the illustrations!</p>
+              <br>
+              <p class="promo-p mt-24">Create the coolest emails!</p>
+            </td>
+          </tr>
+
+          <tr>
+            <td class="divider-td">
+              <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0">
+                <tr>
+                  <td class="divider-line">&nbsp;</td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+
+          <tr>
+            <td class="footer-td text-center" align="center">
+              <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0">
+
+                <tr>
+                  <td class="pb-6 text-center" align="center">
+                    <p class="footer-corp">Corporation</p>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td class="pb-20 text-center" align="center">
+                    <p class="footer-sub">You are receiving this email because you opted in via our <br> website.</p>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td class="pb-20 text-center" align="center">
+                    <table class="m-auto" role="presentation" cellspacing="0" cellpadding="0" border="0" align="center">
+                      <tr>
+                        <td class="social-td" align="center">
+                          <a class="social-a" href="#" target="_blank">
+                            <table class="m-auto" role="presentation" cellspacing="0" cellpadding="0" border="0" align="center">
+                              <tr>
+                                <td class="icon-tw text-center" width="32" height="32" align="center" valign="middle" bgcolor="#1DA1F2">tw</td>
+                              </tr>
+                            </table>
+                          </a>
+                        </td>
+                        <td class="social-td" align="center">
+                          <a class="social-a" href="#" target="_blank">
+                            <table class="m-auto" role="presentation" cellspacing="0" cellpadding="0" border="0" align="center">
+                              <tr>
+                                <td class="icon-ig text-center" width="32" height="32" align="center" valign="middle" bgcolor="#C13584">ig</td>
+                              </tr>
+                            </table>
+                          </a>
+                        </td>
+                        <td class="social-td" align="center">
+                          <a class="social-a" href="#" target="_blank">
+                            <table class="m-auto" role="presentation" cellspacing="0" cellpadding="0" border="0" align="center">
+                              <tr>
+                                <td class="icon-yt text-center" width="32" height="32" align="center" valign="middle" bgcolor="#FF0000">yt</td>
+                              </tr>
+                            </table>
+                          </a>
+                        </td>
+                        <td class="social-td" align="center">
+                          <a class="social-a" href="#" target="_blank">
+                            <table class="m-auto" role="presentation" cellspacing="0" cellpadding="0" border="0" align="center">
+                              <tr>
+                                <td class="icon-wb text-center" width="32" height="32" align="center" valign="middle" bgcolor="#333333">wb</td>
+                              </tr>
+                            </table>
+                          </a>
+                        </td>
+                        <td class="social-td" align="center">
+                          <a class="social-a" href="#" target="_blank">
+                            <table class="m-auto" role="presentation" cellspacing="0" cellpadding="0" border="0" align="center">
+                              <tr>
+                                <td class="icon-in text-center" width="32" height="32" align="center" valign="middle" bgcolor="#0A66C2">in</td>
+                              </tr>
+                            </table>
+                          </a>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td class="pb-2 text-center" align="center">
+                    <p class="footer-sub">Address, #PC</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="pb-12 text-center" align="center">
+                    <p class="footer-sub">City, State.</p>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td class="pb-24 text-center" align="center">
+                    <a class="footer-link" href="#">Unsubscribe</a>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td class="text-center" align="center">
+                    <h2 class="footer-logo">LOGO</h2>
+                  </td>
+                </tr>
+
+              </table>
+            </td>
+          </tr>
+
+        </table>
+        </td>
+    </tr>
+  </table>
+
+</body>
+</html>
