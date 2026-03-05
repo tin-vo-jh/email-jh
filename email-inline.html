@@ -7,318 +7,477 @@
   <meta name="x-apple-disable-message-reformatting">
   <meta name="format-detection" content="telephone=no, date=no, address=no, email=no">
   <title>Email Template</title>
-
-  <style type="text/css">
-    /* ----- RESPONSIVE FOR MOBILE ----- */
-    
-    @media only screen and (max-width: 620px) {
-      table.email-container  { width: 100% !important; max-width: 100% !important; }
-      td.hero-outer          { padding-top: 0 !important; padding-right: 8px !important; padding-bottom: 16px !important; padding-left: 8px !important; }
-      td.section-outer       { padding-top: 0 !important; padding-right: 8px !important; padding-bottom: 16px !important; padding-left: 8px !important; }
-      td.section-inner       { padding-top: 6px !important; padding-right: 6px !important; padding-bottom: 6px !important; padding-left: 6px !important; }
-      td.col-img             { width: 38% !important; padding-right: 8px !important; padding-left: 0 !important; }
-      td.col-img.right       { padding-right: 0 !important; padding-left: 8px !important; }
-      td.col-txt             { width: 62% !important; padding-left: 8px !important; padding-right: 0 !important; }
-      td.col-txt.left        { padding-left: 0 !important; padding-right: 8px !important; }
-      td.col-img img         { width: 100% !important; max-width: 100% !important; height: auto !important; }
-      img.hero-img           { width: 100% !important; max-width: 100% !important; height: auto !important; }
-      h2.hero-h2             { font-size: 24px !important; line-height: 30px !important; }
-      p.hero-p               { font-size: 14px !important; line-height: 20px !important; }
-      h2.section-h2          { font-size: 16px !important; line-height: 22px !important; margin-bottom: 6px !important; }
-      p.section-p            { font-size: 13px !important; line-height: 18px !important; margin-bottom: 8px !important; }
-      td.btn-td              { padding-top: 6px !important; padding-right: 12px !important; padding-bottom: 6px !important; padding-left: 12px !important; }
-      a.btn-a                { font-size: 12px !important; }
-    }
-  </style>
-
+  <!--
+    I have removed the style inside head tag like you asked
+    All images and columns use percentage widths so they scale better on different devices
+    Outlook uses MSO ghost tables. VML for Outlook border-radius,
+    bgcolor attr fallback for Yahoo. margin replaced by td padding.
+  -->
 </head>
-<body style="margin-top: 0; margin-bottom: 0; margin-left: 0; margin-right: 0; padding-top: 0; padding-bottom: 0; padding-left: 0; padding-right: 0; background-color: #e9ecef; font-family: Arial, Helvetica, sans-serif; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;">
 
-  <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" bgcolor="#e9ecef" style="background-color: #e9ecef; border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
-    <tr>
-      <td align="center" style="padding-top: 40px; padding-bottom: 40px; padding-left: 0; padding-right: 0; font-family: Arial, Helvetica, sans-serif;">
+<body bgcolor="#e9ecef" style="margin:0; padding:0; background-color:#e9ecef; font-family:Arial,Helvetica,sans-serif; -webkit-text-size-adjust:100%; -ms-text-size-adjust:100%;">
 
-        <table class="email-container container" align="center" role="presentation" width="600" cellspacing="0" cellpadding="0" border="0" style="width: 600px; max-width: 600px; background-color: #ffffff; margin-top: 0; margin-bottom: 0; margin-left: auto; margin-right: auto; border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
-    
-          <tr>
-            <td align="center" style="padding-top: 32px; padding-right: 32px; padding-bottom: 24px; padding-left: 32px; text-align: center; font-family: Arial, Helvetica, sans-serif;">
-              <h1 style="font-family: Arial, Helvetica, sans-serif; font-weight: 700; font-size: 36px; line-height: 100%; color: #000000; margin-top: 0; margin-bottom: 0; margin-left: 0; margin-right: 0;">LOGO</h1>
-            </td>
-          </tr>
+<!-- OUTER WRAPPER -->
+<table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" bgcolor="#e9ecef"
+       style="background-color:#e9ecef; border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt;">
+  <tr>
+    <td align="center" style="padding:40px 0; font-family:Arial,Helvetica,sans-serif;">
 
-          <tr>
-            <td class="hero-outer" style="padding-top: 0; padding-right: 32px; padding-bottom: 24px; padding-left: 32px; font-family: Arial, Helvetica, sans-serif;">
-              <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
-                <tr>
-                  <td align="center" style="padding-top: 16px; padding-right: 20px; padding-bottom: 20px; padding-left: 20px; text-align: center; font-family: Arial, Helvetica, sans-serif;">
-                    <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
-                      
-                      <tr>
-                        <td align="center" style="padding-bottom: 14px; text-align: center; font-family: Arial, Helvetica, sans-serif;">
-                          <h2 style="font-family: Arial, Helvetica, sans-serif; font-weight: 700; font-size: 36px; line-height: 100%; color: #000000; margin-top: 0; margin-bottom: 0; margin-left: 0; margin-right: 0;">Email Template</h2>
-                        </td>
-                      </tr>
+      <!-- Outlook ghost table: fixes max-width (Outlook ignores CSS max-width) -->
+      <!--[if mso]>
+      <table role="presentation" align="center" border="0" cellspacing="0" cellpadding="0" width="600">
+      <tr><td>
+      <![endif]-->
 
-                      <tr>
-                        <td align="center" style="padding-bottom: 14px; text-align: center; font-family: Arial, Helvetica, sans-serif;">
-                          <table align="center" role="presentation" width="504" cellspacing="0" cellpadding="0" border="0" bgcolor="#FFF0F0" style="border-radius: 20px; background-color: #FFF0F0; margin-top: 0; margin-bottom: 0; margin-left: auto; margin-right: auto; border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
-                            <tr bgcolor="#FFF0F0">
-                              <td align="center" style="padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; background-color: #FFF0F0; text-align: center; font-family: Arial, Helvetica, sans-serif;">
-                                <img class="hero-img" src="https://picsum.photos/seed/hero/504/300" alt="Hero Banner" width="504" height="300" style="display: block; border-width: 0; outline: none; text-decoration: none; -ms-interpolation-mode: bicubic; width: 504px; max-width: 100%; height: auto; border-radius: 20px;">
-                              </td>
-                            </tr>
-                          </table>
-                        </td>
-                      </tr>
+      <!-- EMAIL CONTAINER
+           width:92% keeps natural side margins on small screens (4% each side).
+           max-width:600px caps it on desktop. -->
+      <div style="width:92%; max-width:600px; margin:0 auto; background-color:#ffffff;">
+      <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0"
+             style="background-color:#ffffff; border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt;">
 
-                      <tr>
-                        <td align="center" style="padding-bottom: 16px; text-align: center; font-family: Arial, Helvetica, sans-serif;">
-                          <p style="font-family: Arial, Helvetica, sans-serif; font-size: 19px; line-height: 24px; color: #000000; text-align: center; margin-top: 0; margin-bottom: 0; margin-left: 0; margin-right: 0;">Boost your emails with Blush! Create dope emails easy and fast! Install the Blush plugin to customize all the illustrations!</p>
-                        </td>
-                      </tr>
 
-                      <tr>
-                        <td align="center" style="padding-bottom: 4px; text-align: center; font-family: Arial, Helvetica, sans-serif;">
-                          <table role="presentation" cellspacing="0" cellpadding="0" border="0" align="center" style="margin-top: 0; margin-bottom: 0; margin-left: auto; margin-right: auto; border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
+        <!-- LOGO -->
+        <tr>
+          <td align="center" style="padding:6% 6% 4% 6%; text-align:center; font-family:Arial,Helvetica,sans-serif;">
+            <h1 style="font-family:Arial,Helvetica,sans-serif; font-weight:700; font-size:clamp(24px, 6vw, 36px); line-height:100%; color:#000000; margin:0; padding:0;">LOGO</h1>
+          </td>
+        </tr>
+
+
+        <!-- HERO -->
+        <tr>
+          <td style="padding:0 5% 5% 5%; font-family:Arial,Helvetica,sans-serif;">
+            <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0"
+                   style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt;">
+              <tr>
+                <td align="center" style="padding:3% 4% 4% 4%; text-align:center; font-family:Arial,Helvetica,sans-serif;">
+                  <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0"
+                         style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt;">
+
+                    <tr>
+                      <td align="center" style="padding-bottom:3%; text-align:center; font-family:Arial,Helvetica,sans-serif;">
+                        <h2 style="font-family:Arial,Helvetica,sans-serif; font-weight:700; font-size:clamp(20px, 5vw, 36px); line-height:120%; color:#000000; margin:0; padding:0;">Email Template</h2>
+                      </td>
+                    </tr>
+
+                    <!-- Hero image: VML for Outlook, bgcolor attr for Yahoo, border-radius inline for others -->
+                    <tr>
+                      <td align="center" style="padding-bottom:3%; text-align:center; font-family:Arial,Helvetica,sans-serif;">
+                        <!--[if mso]>
+                        <v:rect xmlns:v="urn:schemas-microsoft-com:vml" style="width:504px; height:300px; mso-position-horizontal:center;" fillcolor="#FFF0F0" stroke="f">
+                          <v:fill type="frame" color="#FFF0F0"/>
+                          <v:textbox inset="0,0,0,0" style="mso-fit-shape-to-text:false;">
+                        <![endif]-->
+                        <!-- width="100%" attribute scales the table to its container on all clients -->
+                        <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" bgcolor="#FFF0F0"
+                               style="border-radius:20px; background-color:#FFF0F0; margin:0 auto; border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt;">
+                          <tr bgcolor="#FFF0F0">
+                            <td align="center" bgcolor="#FFF0F0"
+                                style="padding:0; background-color:#FFF0F0; text-align:center; font-family:Arial,Helvetica,sans-serif;">
+                              <!-- No fixed width attr on img — width:100% makes it fully fluid -->
+                              <img src="https://picsum.photos/seed/hero/504/300" alt="Hero Banner"
+                                   style="display:block; border:0; outline:none; text-decoration:none; -ms-interpolation-mode:bicubic; width:100%; height:auto; border-radius:20px;">
+                            </td>
+                          </tr>
+                        </table>
+                        <!--[if mso]></v:textbox></v:rect><![endif]-->
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td align="center" style="padding-bottom:3%; text-align:center; font-family:Arial,Helvetica,sans-serif;">
+                        <p style="font-family:Arial,Helvetica,sans-serif; font-size:clamp(13px, 3.2vw, 19px); line-height:1.5; color:#000000; text-align:center; margin:0; padding:0;">Boost your emails with Blush! Create dope emails easy and fast! Install the Blush plugin to customize all the illustrations!</p>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td align="center" style="padding-bottom:1%; text-align:center; font-family:Arial,Helvetica,sans-serif;">
+                        <table role="presentation" cellspacing="0" cellpadding="0" border="0" align="center"
+                               style="margin:0 auto; border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt;">
+                          <tr>
+                            <td align="center" style="border:1px solid #000000; border-radius:4px; background-color:#ffffff; padding:8px 18px; font-family:Arial,Helvetica,sans-serif;">
+                              <a href="#" target="_blank" style="font-family:Arial,Helvetica,sans-serif; font-size:clamp(12px, 2.5vw, 14px); color:#000000; text-decoration:none; white-space:nowrap; display:inline-block;">Try it now!</a>
+                            </td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+
+                  </table>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+
+
+        <!-- SECTION 1: Image Left / Text Right -->
+        <tr>
+          <td style="padding:0 5% 5% 5%; font-family:Arial,Helvetica,sans-serif;">
+            <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0"
+                   style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt;">
+              <tr>
+                <td style="padding:2%; font-family:Arial,Helvetica,sans-serif;">
+
+                  <!--[if mso]>
+                  <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0"><tr>
+                  <td width="236" valign="middle" style="padding-right:16px; vertical-align:middle;">
+                  <v:rect xmlns:v="urn:schemas-microsoft-com:vml" style="width:220px; height:236px; mso-position-horizontal:center;" fillcolor="#FFA1B8" stroke="f">
+                    <v:fill type="frame" color="#FFA1B8"/><v:textbox inset="8px,8px,8px,8px" style="mso-fit-shape-to-text:false;">
+                  <![endif]-->
+
+                  <!-- Two-column table: width% attrs are honoured by Gmail app; td widths keep columns side-by-side at any size -->
+                  <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0"
+                         style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt;">
+                    <tr>
+                      <!-- IMAGE COLUMN -->
+                      <td width="42%" valign="middle" style="width:42%; padding-right:3%; vertical-align:middle; font-family:Arial,Helvetica,sans-serif;">
+                        <!--[if mso]></v:textbox></v:rect></td>
+                        <td width="284" valign="middle" style="padding-left:0; vertical-align:middle;">
+                        <![endif]-->
+                        <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" bgcolor="#FFA1B8"
+                               style="border-radius:8px; background-color:#FFA1B8; border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt;">
+                          <tr bgcolor="#FFA1B8">
+                            <td align="center" bgcolor="#FFA1B8" style="padding:4%; background-color:#FFA1B8; border-radius:8px; text-align:center; font-family:Arial,Helvetica,sans-serif;">
+                              <img src="https://picsum.photos/seed/s1/220/220" alt="Customize email illustration"
+                                   style="display:block; border:0; outline:none; text-decoration:none; -ms-interpolation-mode:bicubic; width:100%; height:auto; border-radius:6px;">
+                            </td>
+                          </tr>
+                        </table>
+                      </td>
+                      <!-- TEXT COLUMN -->
+                      <td width="55%" valign="middle" style="width:55%; padding-left:3%; vertical-align:middle; text-align:left; font-family:Arial,Helvetica,sans-serif;">
+                        <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0"
+                               style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt;">
+                          <tr>
+                            <td style="padding-bottom:3%; font-family:Arial,Helvetica,sans-serif;">
+                              <h2 style="font-family:Arial,Helvetica,sans-serif; font-weight:700; font-size:clamp(15px, 3.8vw, 27px); line-height:1.3; color:#000000; margin:0; padding:0;">Customize this email template!</h2>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td style="padding-bottom:4%; font-family:Arial,Helvetica,sans-serif;">
+                              <p style="font-family:Arial,Helvetica,sans-serif; font-size:clamp(12px, 3vw, 19px); line-height:1.5; color:#000000; margin:0; padding:0;">Boost your emails with Blush! Create dope emails easy and fast!</p>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td style="font-family:Arial,Helvetica,sans-serif;">
+                              <table role="presentation" cellspacing="0" cellpadding="0" border="0"
+                                     style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt;">
+                                <tr>
+                                  <td style="border:1px solid #000000; border-radius:4px; background-color:#ffffff; padding:8px 18px; font-family:Arial,Helvetica,sans-serif;">
+                                    <a href="#" target="_blank" style="font-family:Arial,Helvetica,sans-serif; font-size:clamp(11px, 2.5vw, 14px); color:#000000; text-decoration:none; white-space:nowrap; display:inline-block;">Try it now!</a>
+                                  </td>
+                                </tr>
+                              </table>
+                            </td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+                  </table>
+
+                  <!--[if mso]></td></tr></table><![endif]-->
+
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+
+
+        <!-- SECTION 2: Text Left / Image Right -->
+        <tr>
+          <td style="padding:0 5% 5% 5%; font-family:Arial,Helvetica,sans-serif;">
+            <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0"
+                   style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt;">
+              <tr>
+                <td style="padding:2%; font-family:Arial,Helvetica,sans-serif;">
+
+                  <!--[if mso]>
+                  <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0"><tr>
+                  <td width="284" valign="middle" style="padding-right:16px; vertical-align:middle;">
+                  <![endif]-->
+
+                  <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0"
+                         style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt;">
+                    <tr>
+                      <!-- TEXT COLUMN -->
+                      <td width="55%" valign="middle" style="width:55%; padding-right:3%; vertical-align:middle; text-align:left; font-family:Arial,Helvetica,sans-serif;">
+                        <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0"
+                               style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt;">
+                          <tr>
+                            <td style="padding-bottom:3%; font-family:Arial,Helvetica,sans-serif;">
+                              <h2 style="font-family:Arial,Helvetica,sans-serif; font-weight:700; font-size:clamp(15px, 3.8vw, 27px); line-height:1.3; color:#000000; margin:0; padding:0;">Customize this email template!</h2>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td style="padding-bottom:4%; font-family:Arial,Helvetica,sans-serif;">
+                              <p style="font-family:Arial,Helvetica,sans-serif; font-size:clamp(12px, 3vw, 19px); line-height:1.5; color:#000000; margin:0; padding:0;">Boost your emails with Blush! Create dope emails easy and fast!</p>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td style="font-family:Arial,Helvetica,sans-serif;">
+                              <table role="presentation" cellspacing="0" cellpadding="0" border="0"
+                                     style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt;">
+                                <tr>
+                                  <td style="border:1px solid #000000; border-radius:4px; background-color:#ffffff; padding:8px 18px; font-family:Arial,Helvetica,sans-serif;">
+                                    <a href="#" target="_blank" style="font-family:Arial,Helvetica,sans-serif; font-size:clamp(11px, 2.5vw, 14px); color:#000000; text-decoration:none; white-space:nowrap; display:inline-block;">Try it now!</a>
+                                  </td>
+                                </tr>
+                              </table>
+                            </td>
+                          </tr>
+                        </table>
+                      </td>
+                      <!-- IMAGE COLUMN -->
+                      <td width="42%" valign="middle" style="width:42%; padding-left:3%; vertical-align:middle; font-family:Arial,Helvetica,sans-serif;">
+                        <!--[if mso]></td>
+                        <td width="236" valign="middle" style="padding-left:16px; vertical-align:middle;">
+                        <v:rect xmlns:v="urn:schemas-microsoft-com:vml" style="width:220px; height:236px; mso-position-horizontal:center;" fillcolor="#C5F8FF" stroke="f">
+                          <v:fill type="frame" color="#C5F8FF"/><v:textbox inset="8px,8px,8px,8px" style="mso-fit-shape-to-text:false;">
+                        <![endif]-->
+                        <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" bgcolor="#C5F8FF"
+                               style="border-radius:8px; background-color:#C5F8FF; border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt;">
+                          <tr bgcolor="#C5F8FF">
+                            <td align="center" bgcolor="#C5F8FF" style="padding:4%; background-color:#C5F8FF; border-radius:8px; text-align:center; font-family:Arial,Helvetica,sans-serif;">
+                              <img src="https://picsum.photos/seed/s2/220/220" alt="Customize email illustration"
+                                   style="display:block; border:0; outline:none; text-decoration:none; -ms-interpolation-mode:bicubic; width:100%; height:auto; border-radius:6px;">
+                            </td>
+                          </tr>
+                        </table>
+                        <!--[if mso]></v:textbox></v:rect><![endif]-->
+                      </td>
+                    </tr>
+                  </table>
+
+                  <!--[if mso]></td></tr></table><![endif]-->
+
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+
+
+        <!-- SECTION 3: Image Left / Text Right -->
+        <tr>
+          <td style="padding:0 5% 5% 5%; font-family:Arial,Helvetica,sans-serif;">
+            <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0"
+                   style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt;">
+              <tr>
+                <td style="padding:2%; font-family:Arial,Helvetica,sans-serif;">
+
+                  <!--[if mso]>
+                  <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0"><tr>
+                  <td width="236" valign="middle" style="padding-right:16px; vertical-align:middle;">
+                  <v:rect xmlns:v="urn:schemas-microsoft-com:vml" style="width:220px; height:236px; mso-position-horizontal:center;" fillcolor="#FFE27B" stroke="f">
+                    <v:fill type="frame" color="#FFE27B"/><v:textbox inset="8px,8px,8px,8px" style="mso-fit-shape-to-text:false;">
+                  <![endif]-->
+
+                  <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0"
+                         style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt;">
+                    <tr>
+                      <!-- IMAGE COLUMN -->
+                      <td width="42%" valign="middle" style="width:42%; padding-right:3%; vertical-align:middle; font-family:Arial,Helvetica,sans-serif;">
+                        <!--[if mso]></v:textbox></v:rect></td>
+                        <td width="284" valign="middle" style="padding-left:0; vertical-align:middle;">
+                        <![endif]-->
+                        <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" bgcolor="#FFE27B"
+                               style="border-radius:8px; background-color:#FFE27B; border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt;">
+                          <tr bgcolor="#FFE27B">
+                            <td align="center" bgcolor="#FFE27B" style="padding:4%; background-color:#FFE27B; border-radius:8px; text-align:center; font-family:Arial,Helvetica,sans-serif;">
+                              <img src="https://picsum.photos/seed/s3/220/220" alt="Customize email illustration"
+                                   style="display:block; border:0; outline:none; text-decoration:none; -ms-interpolation-mode:bicubic; width:100%; height:auto; border-radius:6px;">
+                            </td>
+                          </tr>
+                        </table>
+                      </td>
+                      <!-- TEXT COLUMN -->
+                      <td width="55%" valign="middle" style="width:55%; padding-left:3%; vertical-align:middle; text-align:left; font-family:Arial,Helvetica,sans-serif;">
+                        <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0"
+                               style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt;">
+                          <tr>
+                            <td style="padding-bottom:3%; font-family:Arial,Helvetica,sans-serif;">
+                              <h2 style="font-family:Arial,Helvetica,sans-serif; font-weight:700; font-size:clamp(15px, 3.8vw, 27px); line-height:1.3; color:#000000; margin:0; padding:0;">Customize this email template!</h2>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td style="padding-bottom:4%; font-family:Arial,Helvetica,sans-serif;">
+                              <p style="font-family:Arial,Helvetica,sans-serif; font-size:clamp(12px, 3vw, 19px); line-height:1.5; color:#000000; margin:0; padding:0;">Boost your emails with Blush! Create dope emails easy and fast!</p>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td style="font-family:Arial,Helvetica,sans-serif;">
+                              <table role="presentation" cellspacing="0" cellpadding="0" border="0"
+                                     style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt;">
+                                <tr>
+                                  <td style="border:1px solid #000000; border-radius:4px; background-color:#ffffff; padding:8px 18px; font-family:Arial,Helvetica,sans-serif;">
+                                    <a href="#" target="_blank" style="font-family:Arial,Helvetica,sans-serif; font-size:clamp(11px, 2.5vw, 14px); color:#000000; text-decoration:none; white-space:nowrap; display:inline-block;">Try it now!</a>
+                                  </td>
+                                </tr>
+                              </table>
+                            </td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+                  </table>
+
+                  <!--[if mso]></td></tr></table><![endif]-->
+
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+
+
+        <!-- PROMO TEXT -->
+        <tr>
+          <td style="padding:0 5% 0 5%; text-align:left; font-family:Arial,Helvetica,sans-serif;">
+            <p style="font-family:Arial,Helvetica,sans-serif; font-size:clamp(13px, 3.2vw, 19px); line-height:1.5; color:#000000; margin:0; padding:0;">Boost your emails with Blush! Create dope emails easy and fast! Install the Blush plugin to customize all the illustrations!</p>
+          </td>
+        </tr>
+        <tr>
+          <td style="padding:0 5% 5% 5%; text-align:left; font-family:Arial,Helvetica,sans-serif;">
+            <p style="font-family:Arial,Helvetica,sans-serif; font-size:clamp(13px, 3.2vw, 19px); line-height:1.5; color:#000000; margin:0; padding:0; padding-top:5%;">Create the coolest emails!</p>
+          </td>
+        </tr>
+
+
+        <!-- DIVIDER -->
+        <tr>
+          <td style="padding:0 5%; font-family:Arial,Helvetica,sans-serif;">
+            <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0"
+                   style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt;">
+              <tr>
+                <td style="font-size:0; line-height:0; border-bottom:1px solid #000000;">&nbsp;</td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+
+
+        <!-- FOOTER -->
+        <tr>
+          <td align="center" style="padding:5% 7% 7% 7%; text-align:center; font-family:Arial,Helvetica,sans-serif;">
+            <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0"
+                   style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt;">
+
+              <tr>
+                <td align="center" style="padding-bottom:2%; text-align:center; font-family:Arial,Helvetica,sans-serif;">
+                  <p style="font-family:Arial,Helvetica,sans-serif; font-weight:700; font-size:clamp(13px, 2.5vw, 15px); line-height:1.5; color:#000000; margin:0; padding:0;">Corporation</p>
+                </td>
+              </tr>
+
+              <tr>
+                <td align="center" style="padding-bottom:4%; text-align:center; font-family:Arial,Helvetica,sans-serif;">
+                  <p style="font-family:Arial,Helvetica,sans-serif; font-size:clamp(11px, 2.2vw, 13px); line-height:1.5; color:#000000; margin:0; padding:0;">You are receiving this email because you opted in via our website.</p>
+                </td>
+              </tr>
+
+              <!-- Social icons -->
+              <tr>
+                <td align="center" style="padding-bottom:4%; text-align:center; font-family:Arial,Helvetica,sans-serif;">
+                  <table role="presentation" cellspacing="0" cellpadding="0" border="0" align="center"
+                         style="margin:0 auto; border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt;">
+                    <tr>
+                      <td align="center" style="padding:0 6px; font-family:Arial,Helvetica,sans-serif;">
+                        <a href="#" target="_blank" style="text-decoration:none; color:inherit; font-family:Arial,Helvetica,sans-serif;">
+                          <table role="presentation" cellspacing="0" cellpadding="0" border="0" align="center"
+                                 style="margin:0 auto; border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt;">
                             <tr>
-                              <td class="btn-td" align="center" style="border-top: 1px solid #000000; border-right: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-radius: 4px; background-color: #ffffff; padding-top: 8px; padding-right: 18px; padding-bottom: 8px; padding-left: 18px; font-family: Arial, Helvetica, sans-serif;">
-                                <a class="btn-a" href="#" target="_blank" style="font-family: Arial, Helvetica, sans-serif; font-size: 14px; color: #000000; text-decoration: none; white-space: nowrap; display: inline-block;">Try it now!</a>
-                              </td>
+                              <td width="32" height="32" align="center" valign="middle" bgcolor="#1DA1F2"
+                                  style="width:32px; height:32px; background-color:#1DA1F2; border-radius:6px; font-family:Arial,Helvetica,sans-serif; font-size:11px; font-weight:700; color:#ffffff; text-align:center; line-height:32px;">tw</td>
                             </tr>
                           </table>
-                        </td>
-                      </tr>
-
-                    </table>
-                  </td>
-                </tr>
-              </table>
-            </td>
-          </tr>
-
-          <tr>
-            <td class="section-outer" style="padding-top: 0; padding-right: 32px; padding-bottom: 24px; padding-left: 32px; font-family: Arial, Helvetica, sans-serif;">
-              <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
-                <tr>
-                  <td class="section-inner" style="padding-top: 12px; padding-right: 12px; padding-bottom: 12px; padding-left: 12px; font-family: Arial, Helvetica, sans-serif;">
-                    <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
-                      <tr>
-                        <td class="col-img" width="45%" valign="middle" style="width: 45%; padding-top: 0; padding-bottom: 0; padding-right: 16px; padding-left: 0; vertical-align: middle; font-family: Arial, Helvetica, sans-serif;">
-                          <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" bgcolor="#FFA1B8" style="border-radius: 8px; background-color: #FFA1B8; border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
-                            <tr bgcolor="#FFA1B8">
-                              <td align="center" style="padding-top: 8px; padding-right: 8px; padding-bottom: 8px; padding-left: 8px; background-color: #FFA1B8; border-radius: 8px; text-align: center; font-family: Arial, Helvetica, sans-serif;">
-                                <img src="https://picsum.photos/seed/s1/220/220" alt="Customize email illustration" width="220" height="220" style="display: block; border-width: 0; outline: none; text-decoration: none; -ms-interpolation-mode: bicubic; width: 100%; max-width: 220px; height: auto; border-radius: 6px;">
-                              </td>
-                            </tr>
-                          </table>
-                        </td>
-                        <td class="col-txt" width="55%" valign="middle" style="width: 55%; padding-top: 0; padding-bottom: 0; padding-left: 16px; padding-right: 0; vertical-align: middle; text-align: left; font-family: Arial, Helvetica, sans-serif;">
-                          <h2 style="font-family: Arial, Helvetica, sans-serif; font-weight: 700; font-size: 27px; line-height: 34px; color: #000000; margin-top: 0; margin-right: 0; margin-bottom: 10px; margin-left: 0;">Customize this email template!</h2>
-                          <p style="font-family: Arial, Helvetica, sans-serif; font-size: 19px; line-height: 24px; color: #000000; margin-top: 0; margin-right: 0; margin-bottom: 14px; margin-left: 0;">Boost your emails with Blush! Create dope emails easy and fast!</p>
-                          <table role="presentation" cellspacing="0" cellpadding="0" border="0" style="border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
+                        </a>
+                      </td>
+                      <td align="center" style="padding:0 6px; font-family:Arial,Helvetica,sans-serif;">
+                        <a href="#" target="_blank" style="text-decoration:none; color:inherit; font-family:Arial,Helvetica,sans-serif;">
+                          <table role="presentation" cellspacing="0" cellpadding="0" border="0" align="center"
+                                 style="margin:0 auto; border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt;">
                             <tr>
-                              <td class="btn-td" style="border-top: 1px solid #000000; border-right: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-radius: 4px; background-color: #ffffff; padding-top: 8px; padding-right: 18px; padding-bottom: 8px; padding-left: 18px; font-family: Arial, Helvetica, sans-serif;">
-                                <a class="btn-a" href="#" target="_blank" style="font-family: Arial, Helvetica, sans-serif; font-size: 14px; color: #000000; text-decoration: none; white-space: nowrap; display: inline-block;">Try it now!</a>
-                              </td>
+                              <td width="32" height="32" align="center" valign="middle" bgcolor="#C13584"
+                                  style="width:32px; height:32px; background-color:#C13584; border-radius:6px; font-family:Arial,Helvetica,sans-serif; font-size:11px; font-weight:700; color:#ffffff; text-align:center; line-height:32px;">ig</td>
                             </tr>
                           </table>
-                        </td>
-                      </tr>
-                    </table>
-                  </td>
-                </tr>
-              </table>
-            </td>
-          </tr>
-
-          <tr>
-            <td class="section-outer" style="padding-top: 0; padding-right: 32px; padding-bottom: 24px; padding-left: 32px; font-family: Arial, Helvetica, sans-serif;">
-              <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
-                <tr>
-                  <td class="section-inner" style="padding-top: 12px; padding-right: 12px; padding-bottom: 12px; padding-left: 12px; font-family: Arial, Helvetica, sans-serif;">
-                    <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
-                      <tr>
-                        <td class="col-txt left" width="55%" valign="middle" style="width: 55%; padding-top: 0; padding-bottom: 0; padding-right: 16px; padding-left: 0; vertical-align: middle; text-align: left; font-family: Arial, Helvetica, sans-serif;">
-                          <h2 style="font-family: Arial, Helvetica, sans-serif; font-weight: 700; font-size: 27px; line-height: 34px; color: #000000; margin-top: 0; margin-right: 0; margin-bottom: 10px; margin-left: 0;">Customize this email template!</h2>
-                          <p style="font-family: Arial, Helvetica, sans-serif; font-size: 19px; line-height: 24px; color: #000000; margin-top: 0; margin-right: 0; margin-bottom: 14px; margin-left: 0;">Boost your emails with Blush! Create dope emails easy and fast!</p>
-                          <table role="presentation" cellspacing="0" cellpadding="0" border="0" style="border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
+                        </a>
+                      </td>
+                      <td align="center" style="padding:0 6px; font-family:Arial,Helvetica,sans-serif;">
+                        <a href="#" target="_blank" style="text-decoration:none; color:inherit; font-family:Arial,Helvetica,sans-serif;">
+                          <table role="presentation" cellspacing="0" cellpadding="0" border="0" align="center"
+                                 style="margin:0 auto; border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt;">
                             <tr>
-                              <td class="btn-td" style="border-top: 1px solid #000000; border-right: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-radius: 4px; background-color: #ffffff; padding-top: 8px; padding-right: 18px; padding-bottom: 8px; padding-left: 18px; font-family: Arial, Helvetica, sans-serif;">
-                                <a class="btn-a" href="#" target="_blank" style="font-family: Arial, Helvetica, sans-serif; font-size: 14px; color: #000000; text-decoration: none; white-space: nowrap; display: inline-block;">Try it now!</a>
-                              </td>
+                              <td width="32" height="32" align="center" valign="middle" bgcolor="#FF0000"
+                                  style="width:32px; height:32px; background-color:#FF0000; border-radius:6px; font-family:Arial,Helvetica,sans-serif; font-size:11px; font-weight:700; color:#ffffff; text-align:center; line-height:32px;">yt</td>
                             </tr>
                           </table>
-                        </td>
-                        <td class="col-img right" width="45%" valign="middle" style="width: 45%; padding-top: 0; padding-bottom: 0; padding-left: 16px; padding-right: 0; vertical-align: middle; font-family: Arial, Helvetica, sans-serif;">
-                          <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" bgcolor="#C5F8FF" style="border-radius: 8px; background-color: #C5F8FF; border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
-                            <tr bgcolor="#C5F8FF">
-                              <td align="center" style="padding-top: 8px; padding-right: 8px; padding-bottom: 8px; padding-left: 8px; background-color: #C5F8FF; border-radius: 8px; text-align: center; font-family: Arial, Helvetica, sans-serif;">
-                                <img src="https://picsum.photos/seed/s2/220/220" alt="Customize email illustration" width="220" height="220" style="display: block; border-width: 0; outline: none; text-decoration: none; -ms-interpolation-mode: bicubic; width: 100%; max-width: 220px; height: auto; border-radius: 6px;">
-                              </td>
-                            </tr>
-                          </table>
-                        </td>
-                      </tr>
-                    </table>
-                  </td>
-                </tr>
-              </table>
-            </td>
-          </tr>
-
-          <tr>
-            <td class="section-outer" style="padding-top: 0; padding-right: 32px; padding-bottom: 24px; padding-left: 32px; font-family: Arial, Helvetica, sans-serif;">
-              <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
-                <tr>
-                  <td class="section-inner" style="padding-top: 12px; padding-right: 12px; padding-bottom: 12px; padding-left: 12px; font-family: Arial, Helvetica, sans-serif;">
-                    <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
-                      <tr>
-                        <td class="col-img" width="45%" valign="middle" style="width: 45%; padding-top: 0; padding-bottom: 0; padding-right: 16px; padding-left: 0; vertical-align: middle; font-family: Arial, Helvetica, sans-serif;">
-                          <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" bgcolor="#FFE27B" style="border-radius: 8px; background-color: #FFE27B; border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
-                            <tr bgcolor="#FFE27B">
-                              <td align="center" style="padding-top: 8px; padding-right: 8px; padding-bottom: 8px; padding-left: 8px; background-color: #FFE27B; border-radius: 8px; text-align: center; font-family: Arial, Helvetica, sans-serif;">
-                                <img src="https://picsum.photos/seed/s3/220/220" alt="Customize email illustration" width="220" height="220" style="display: block; border-width: 0; outline: none; text-decoration: none; -ms-interpolation-mode: bicubic; width: 100%; max-width: 220px; height: auto; border-radius: 6px;">
-                              </td>
-                            </tr>
-                          </table>
-                        </td>
-                        <td class="col-txt" width="55%" valign="middle" style="width: 55%; padding-top: 0; padding-bottom: 0; padding-left: 16px; padding-right: 0; vertical-align: middle; text-align: left; font-family: Arial, Helvetica, sans-serif;">
-                          <h2 style="font-family: Arial, Helvetica, sans-serif; font-weight: 700; font-size: 27px; line-height: 34px; color: #000000; margin-top: 0; margin-right: 0; margin-bottom: 10px; margin-left: 0;">Customize this email template!</h2>
-                          <p style="font-family: Arial, Helvetica, sans-serif; font-size: 19px; line-height: 24px; color: #000000; margin-top: 0; margin-right: 0; margin-bottom: 14px; margin-left: 0;">Boost your emails with Blush! Create dope emails easy and fast!</p>
-                          <table role="presentation" cellspacing="0" cellpadding="0" border="0" style="border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
+                        </a>
+                      </td>
+                      <td align="center" style="padding:0 6px; font-family:Arial,Helvetica,sans-serif;">
+                        <a href="#" target="_blank" style="text-decoration:none; color:inherit; font-family:Arial,Helvetica,sans-serif;">
+                          <table role="presentation" cellspacing="0" cellpadding="0" border="0" align="center"
+                                 style="margin:0 auto; border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt;">
                             <tr>
-                              <td class="btn-td" style="border-top: 1px solid #000000; border-right: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-radius: 4px; background-color: #ffffff; padding-top: 8px; padding-right: 18px; padding-bottom: 8px; padding-left: 18px; font-family: Arial, Helvetica, sans-serif;">
-                                <a class="btn-a" href="#" target="_blank" style="font-family: Arial, Helvetica, sans-serif; font-size: 14px; color: #000000; text-decoration: none; white-space: nowrap; display: inline-block;">Try it now!</a>
-                              </td>
+                              <td width="32" height="32" align="center" valign="middle" bgcolor="#333333"
+                                  style="width:32px; height:32px; background-color:#333333; border-radius:6px; font-family:Arial,Helvetica,sans-serif; font-size:11px; font-weight:700; color:#ffffff; text-align:center; line-height:32px;">wb</td>
                             </tr>
                           </table>
-                        </td>
-                      </tr>
-                    </table>
-                  </td>
-                </tr>
-              </table>
-            </td>
-          </tr>
+                        </a>
+                      </td>
+                      <td align="center" style="padding:0 6px; font-family:Arial,Helvetica,sans-serif;">
+                        <a href="#" target="_blank" style="text-decoration:none; color:inherit; font-family:Arial,Helvetica,sans-serif;">
+                          <table role="presentation" cellspacing="0" cellpadding="0" border="0" align="center"
+                                 style="margin:0 auto; border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt;">
+                            <tr>
+                              <td width="32" height="32" align="center" valign="middle" bgcolor="#0A66C2"
+                                  style="width:32px; height:32px; background-color:#0A66C2; border-radius:6px; font-family:Arial,Helvetica,sans-serif; font-size:11px; font-weight:700; color:#ffffff; text-align:center; line-height:32px;">in</td>
+                            </tr>
+                          </table>
+                        </a>
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
 
-          <tr>
-            <td class="promo-td" style="padding-top: 0; padding-right: 32px; padding-bottom: 24px; padding-left: 32px; text-align: left; font-family: Arial, Helvetica, sans-serif;">
-              <p style="font-family: Arial, Helvetica, sans-serif; font-size: 19px; line-height: 24px; color: #000000; margin-top: 0; margin-bottom: 0; margin-left: 0; margin-right: 0;">Boost your emails with Blush! Create dope emails easy and fast! Install the Blush plugin to customize all the illustrations!</p>
-              <p style="font-family: Arial, Helvetica, sans-serif; font-size: 19px; line-height: 24px; color: #000000; margin-top: 24px; margin-bottom: 0; margin-left: 0; margin-right: 0;">Create the coolest emails!</p>
-            </td>
-          </tr>
+              <tr>
+                <td align="center" style="padding-bottom:1%; text-align:center; font-family:Arial,Helvetica,sans-serif;">
+                  <p style="font-family:Arial,Helvetica,sans-serif; font-size:clamp(11px, 2.2vw, 13px); line-height:1.5; color:#000000; margin:0; padding:0;">Address, #PC</p>
+                </td>
+              </tr>
+              <tr>
+                <td align="center" style="padding-bottom:3%; text-align:center; font-family:Arial,Helvetica,sans-serif;">
+                  <p style="font-family:Arial,Helvetica,sans-serif; font-size:clamp(11px, 2.2vw, 13px); line-height:1.5; color:#000000; margin:0; padding:0;">City, State.</p>
+                </td>
+              </tr>
 
-          <tr>
-            <td style="padding-top: 0; padding-bottom: 0; padding-right: 32px; padding-left: 32px; font-family: Arial, Helvetica, sans-serif;">
-              <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
-                <tr>
-                  <td style="font-size: 0px; line-height: 0px; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: #000000; font-family: Arial, Helvetica, sans-serif;">&nbsp;</td>
-                </tr>
-              </table>
-            </td>
-          </tr>
+              <tr>
+                <td align="center" style="padding-bottom:5%; text-align:center; font-family:Arial,Helvetica,sans-serif;">
+                  <a href="#" style="font-family:Arial,Helvetica,sans-serif; font-size:clamp(11px, 2.2vw, 13px); color:#000000; text-decoration:underline;">Unsubscribe</a>
+                </td>
+              </tr>
 
-          <tr>
-            <td align="center" style="padding-top: 24px; padding-right: 40px; padding-bottom: 40px; padding-left: 40px; text-align: center; font-family: Arial, Helvetica, sans-serif;">
-              <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
+              <tr>
+                <td align="center" style="text-align:center; font-family:Arial,Helvetica,sans-serif;">
+                  <h2 style="font-family:Arial,Helvetica,sans-serif; font-weight:700; font-size:clamp(24px, 6vw, 36px); line-height:100%; color:#000000; margin:0; padding:0;">LOGO</h2>
+                </td>
+              </tr>
 
-                <tr>
-                  <td align="center" style="padding-bottom: 6px; text-align: center; font-family: Arial, Helvetica, sans-serif;">
-                    <p style="font-family: Arial, Helvetica, sans-serif; font-weight: 700; font-size: 15px; line-height: 22px; color: #000000; margin-top: 0; margin-bottom: 0; margin-left: 0; margin-right: 0;">Corporation</p>
-                  </td>
-                </tr>
+            </table>
+          </td>
+        </tr>
 
-                <tr>
-                  <td align="center" style="padding-bottom: 20px; text-align: center; font-family: Arial, Helvetica, sans-serif;">
-                    <p style="font-family: Arial, Helvetica, sans-serif; font-size: 13px; line-height: 20px; color: #000000; margin-top: 0; margin-bottom: 0; margin-left: 0; margin-right: 0;">You are receiving this email because you opted in via our website.</p>
-                  </td>
-                </tr>
+      </table>
+      </div><!-- /email container -->
 
-                <tr>
-                  <td align="center" style="padding-bottom: 20px; text-align: center; font-family: Arial, Helvetica, sans-serif;">
-                    <table role="presentation" cellspacing="0" cellpadding="0" border="0" align="center" style="margin-top: 0; margin-bottom: 0; margin-left: auto; margin-right: auto; border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
-                      <tr>
-                        <td align="center" style="padding-top: 0; padding-bottom: 0; padding-right: 6px; padding-left: 6px; font-family: Arial, Helvetica, sans-serif;">
-                          <a href="#" target="_blank" style="text-decoration: none; color: inherit; font-family: Arial, Helvetica, sans-serif;">
-                            <table role="presentation" cellspacing="0" cellpadding="0" border="0" align="center" style="margin-top: 0; margin-bottom: 0; margin-left: auto; margin-right: auto; border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
-                              <tr>
-                                <td width="32" height="32" align="center" valign="middle" bgcolor="#1DA1F2" style="width: 32px; height: 32px; background-color: #1DA1F2; border-radius: 6px; font-family: Arial, Helvetica, sans-serif; font-size: 11px; font-weight: 700; color: #ffffff; text-align: center; line-height: 32px;">tw</td>
-                              </tr>
-                            </table>
-                          </a>
-                        </td>
-                        <td align="center" style="padding-top: 0; padding-bottom: 0; padding-right: 6px; padding-left: 6px; font-family: Arial, Helvetica, sans-serif;">
-                          <a href="#" target="_blank" style="text-decoration: none; color: inherit; font-family: Arial, Helvetica, sans-serif;">
-                            <table role="presentation" cellspacing="0" cellpadding="0" border="0" align="center" style="margin-top: 0; margin-bottom: 0; margin-left: auto; margin-right: auto; border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
-                              <tr>
-                                <td width="32" height="32" align="center" valign="middle" bgcolor="#C13584" style="width: 32px; height: 32px; background-color: #C13584; border-radius: 6px; font-family: Arial, Helvetica, sans-serif; font-size: 11px; font-weight: 700; color: #ffffff; text-align: center; line-height: 32px;">ig</td>
-                              </tr>
-                            </table>
-                          </a>
-                        </td>
-                        <td align="center" style="padding-top: 0; padding-bottom: 0; padding-right: 6px; padding-left: 6px; font-family: Arial, Helvetica, sans-serif;">
-                          <a href="#" target="_blank" style="text-decoration: none; color: inherit; font-family: Arial, Helvetica, sans-serif;">
-                            <table role="presentation" cellspacing="0" cellpadding="0" border="0" align="center" style="margin-top: 0; margin-bottom: 0; margin-left: auto; margin-right: auto; border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
-                              <tr>
-                                <td width="32" height="32" align="center" valign="middle" bgcolor="#FF0000" style="width: 32px; height: 32px; background-color: #FF0000; border-radius: 6px; font-family: Arial, Helvetica, sans-serif; font-size: 11px; font-weight: 700; color: #ffffff; text-align: center; line-height: 32px;">yt</td>
-                              </tr>
-                            </table>
-                          </a>
-                        </td>
-                        <td align="center" style="padding-top: 0; padding-bottom: 0; padding-right: 6px; padding-left: 6px; font-family: Arial, Helvetica, sans-serif;">
-                          <a href="#" target="_blank" style="text-decoration: none; color: inherit; font-family: Arial, Helvetica, sans-serif;">
-                            <table role="presentation" cellspacing="0" cellpadding="0" border="0" align="center" style="margin-top: 0; margin-bottom: 0; margin-left: auto; margin-right: auto; border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
-                              <tr>
-                                <td width="32" height="32" align="center" valign="middle" bgcolor="#333333" style="width: 32px; height: 32px; background-color: #333333; border-radius: 6px; font-family: Arial, Helvetica, sans-serif; font-size: 11px; font-weight: 700; color: #ffffff; text-align: center; line-height: 32px;">wb</td>
-                              </tr>
-                            </table>
-                          </a>
-                        </td>
-                        <td align="center" style="padding-top: 0; padding-bottom: 0; padding-right: 6px; padding-left: 6px; font-family: Arial, Helvetica, sans-serif;">
-                          <a href="#" target="_blank" style="text-decoration: none; color: inherit; font-family: Arial, Helvetica, sans-serif;">
-                            <table role="presentation" cellspacing="0" cellpadding="0" border="0" align="center" style="margin-top: 0; margin-bottom: 0; margin-left: auto; margin-right: auto; border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
-                              <tr>
-                                <td width="32" height="32" align="center" valign="middle" bgcolor="#0A66C2" style="width: 32px; height: 32px; background-color: #0A66C2; border-radius: 6px; font-family: Arial, Helvetica, sans-serif; font-size: 11px; font-weight: 700; color: #ffffff; text-align: center; line-height: 32px;">in</td>
-                              </tr>
-                            </table>
-                          </a>
-                        </td>
-                      </tr>
-                    </table>
-                  </td>
-                </tr>
+      <!--[if mso]></td></tr></table><![endif]-->
 
-                <tr>
-                  <td align="center" style="padding-bottom: 2px; text-align: center; font-family: Arial, Helvetica, sans-serif;">
-                    <p style="font-family: Arial, Helvetica, sans-serif; font-size: 13px; line-height: 20px; color: #000000; margin-top: 0; margin-bottom: 0; margin-left: 0; margin-right: 0;">Address, #PC</p>
-                  </td>
-                </tr>
-                <tr>
-                  <td align="center" style="padding-bottom: 12px; text-align: center; font-family: Arial, Helvetica, sans-serif;">
-                    <p style="font-family: Arial, Helvetica, sans-serif; font-size: 13px; line-height: 20px; color: #000000; margin-top: 0; margin-bottom: 0; margin-left: 0; margin-right: 0;">City, State.</p>
-                  </td>
-                </tr>
-
-                <tr>
-                  <td align="center" style="padding-bottom: 24px; text-align: center; font-family: Arial, Helvetica, sans-serif;">
-                    <a href="#" style="font-family: Arial, Helvetica, sans-serif; font-size: 13px; color: #000000; text-decoration: underline;">Unsubscribe</a>
-                  </td>
-                </tr>
-
-                <tr>
-                  <td align="center" style="text-align: center; font-family: Arial, Helvetica, sans-serif;">
-                    <h2 style="font-family: Arial, Helvetica, sans-serif; font-weight: 700; font-size: 36px; line-height: 100%; color: #000000; margin-top: 0; margin-bottom: 0; margin-left: 0; margin-right: 0;">LOGO</h2>
-                  </td>
-                </tr>
-
-              </table>
-            </td>
-          </tr>
-
-        </table>
-        </td>
-    </tr>
-  </table>
+    </td>
+  </tr>
+</table>
 
 </body>
 </html>
